@@ -15,7 +15,7 @@
     - ./Anaconda3-2025.06-0-MacOSX-x86_64.sh
  - Restart/Reload the Shell :
     - source ~/.zshrc
- - Verify installation: 
+ - Verify installation:
     - conda --version
 
 # 2. GitBash:
