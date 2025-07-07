@@ -18,4 +18,4 @@ The following you will download, install, and initiate all through your terminal
     - Verify installation : git --version
 - For Bash:
     - Install Bash: brew install bash
-    - Change and specify a new login shell: chsh -s /us/local/bin/bash
+    - Change and specify a new login shell: chsh -s /us/local/bin/bash 12@!Bg!@21
