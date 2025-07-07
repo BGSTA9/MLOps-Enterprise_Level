@@ -6,17 +6,17 @@
 
 # 1. Anaconda:
  - Find the repo for the package from: 
-        - https://repo.anaconda.com/archive/ copy the latest corresponding to your OS base
+    - https://repo.anaconda.com/archive/ copy the latest corresponding to your OS base
  - Copy and paste the link following with "wget":
-        - wget https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.sh
+    - wget https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.sh
  - Make it executable:
-        - chmod +x Anaconda3-2025.06-0-MacOSX-x86_64.sh
+    - chmod +x Anaconda3-2025.06-0-MacOSX-x86_64.sh
  - Run the installer:
-        - ./Anaconda3-2025.06-0-MacOSX-x86_64.sh
+    - ./Anaconda3-2025.06-0-MacOSX-x86_64.sh
  - Restart/Reload the Shell :
-        - source ~/.zshrc
+    - source ~/.zshrc
  - Verify installation: 
-        - conda --version
+    - conda --version
 
 # 2. GitBash:
 
