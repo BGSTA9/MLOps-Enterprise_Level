@@ -2,20 +2,40 @@
 
 The following you will download, install, and initiate all through your terminal window, for [MAC OS]:
 
-1. Anaconda:
- - find the repo for the package from : https://repo.anaconda.com/archive/ copy the latest corresponding to your OS base
- - for MAC, copy and paste the link following with "wget": wget https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.sh
- - Make it executable: chmod +x Anaconda3-2025.06-0-MacOSX-x86_64.sh
- - Run the installer: ./Anaconda3-2025.06-0-MacOSX-x86_64.sh
- - Restart/Reload the Shell : source ~/.zshrc
- - Verify installation: conda --version
+#!/usr/bin/env bash
+set -euo pipefail
 
-2. GitBash
+echo "🚀 Starting Enterprise-Level MLOps Setup on macOS…"
 
-- For Git:
-    - Install Homebrew : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    - Install Git : brew install git
-    - Verify installation : git --version
-- For Bash:
-    - Install Bash: brew install bash
-    - Change and specify a new login shell: chsh -s /us/local/bin/bash
+# 1. Install Anaconda
+ANACONDA_URL="https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.sh"
+ANACONDA_SCRIPT="${ANACONDA_URL##*/}"
+wget --quiet "$ANACONDA_URL" -O "$ANACONDA_SCRIPT"
+chmod +x "$ANACONDA_SCRIPT"
+./"$ANACONDA_SCRIPT" -b
+~/anaconda3/bin/conda init zsh
+
+# 2. Install Homebrew (if missing)
+if ! command -v brew &>/dev/null; then
+  echo "🔄 Installing Homebrew…"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# 3. Install Git
+if ! command -v git &>/dev/null; then
+  echo "🔄 Installing Git…"
+  brew install git
+fi
+
+# 4. Install and switch to latest Bash
+BREW_BASH="$(brew --prefix)/bin/bash"
+if ! grep -qxF "$BREW_BASH" /etc/shells; then
+  echo "🔄 Installing Bash via Homebrew…"
+  brew install bash
+  sudo sh -c "echo '$BREW_BASH' >> /etc/shells"
+fi
+if [ "$SHELL" != "$BREW_BASH" ]; then
+  chsh -s "$BREW_BASH"
+fi
+
+echo "🎉 Setup complete. Restart your Terminal to apply changes."
