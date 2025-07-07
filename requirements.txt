@@ -1,0 +1,39 @@
+ipykernel             # Provides the IPython kernel for Jupyter notebooks and interactive environments  
+pandas                # Data structures and data analysis tools  
+numpy                 # Fundamental package for numerical computing  
+matplotlib            # 2D plotting library for creating static figures  
+plotly                # Interactive plotting library for web-based visualizations  
+seaborn               # Statistical data visualization built on matplotlib  
+scipy                 # Scientific computing library with optimization and statistical routines  
+scikit-learn          # Machine learning library for classification, regression, clustering, etc.  
+imblearn              # Tools for handling imbalanced datasets (oversampling, undersampling)  
+xgboost               # Optimized gradient boosting framework for high-performance models  
+catboost              # Gradient boosting library with categorical feature support  
+pymongo               # MongoDB driver for Python to interact with NoSQL databases  
+from_root             # Simplifies imports by adding project root to Python path  
+evidently==0.7.9      # Automated data and model monitoring dashboards  
+dill                  # Serialization library for saving complex Python objects  
+PyYAML                # YAML parser and emitter for configuration files  
+neuro_mf              # (Domain-specific) module for neuro-matrix factorization workflows  
+boto3                 # AWS SDK for Python to interact with AWS services  
+mypy-boto3-s3         # Type-annotated AWS S3 client for static type checking  
+botocore              # Low-level core functionality underpinning boto3  
+fastapi               # High-performance web framework for building APIs  
+uvicorn               # ASGI server for running FastAPI applications  
+jinja2                # Templating engine for generating HTML or text files  
+python-multipart      # Handles form-data and file uploads in FastAPI  
+-e .                  # Installs the current package in editable (development) mode. For local development, this allows you to make changes to the code without reinstalling the package.
+# -e . is used to install the package in editable mode, allowing for local development and testing without needing to reinstall the package after every change.
+# This is useful for development environments where you want to test changes immediately without the overhead of reinstalling the package.
+# The dot (.) indicates the current directory, which is where the setup.py file is located.
+# This line is typically used in a requirements.txt file to ensure that the package being developed can be easily installed and tested in a local environment.
+# It allows for quick iteration and testing of changes made to the package code.
+# This line is often used in conjunction with a setup.py file that defines the package metadata and dependencies.
+# It is a common practice in Python projects to facilitate local development and testing of packages.
+# The editable install mode is particularly useful for developers who are actively working on the package and want to see the effects of their changes immediately.
+# It avoids the need for repeated installation steps, making the development process more efficient.
+# The editable install mode is supported by setuptools, which is a widely used tool for packaging Python projects.
+# It allows developers to work on their packages without the need for constant reinstallation, streamlining the development workflow.
+# This line is often included in the requirements.txt file to ensure that the package can be easily installed in a local development environment.
+# It is a common practice in Python projects to facilitate local development and testing of packages.
+# The editable install mode is particularly useful for developers who are actively working on the package and want to see the effects of their changes.
