@@ -1,4 +1,7 @@
 from mlops_uno.logger import logging
+
+#logging.info("This is a demo of the logger module.")
+
 from mlops_uno.exception import CustomException
 import sys
 
